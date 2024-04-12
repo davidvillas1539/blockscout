@@ -57,6 +57,10 @@ services:
       service: sig-provider
 
   frontend:
+    image: ui
+    build:
+      context: ../frontend
+      dockerfile: Dockerfile
     depends_on:
       - backend
     extends:
