@@ -41,10 +41,10 @@ services:
     links:
       - db:database
     environment:
-        ETHEREUM_JSONRPC_HTTP_URL: https://rpc-devnet.ezcode.uno/
-        ETHEREUM_JSONRPC_TRACE_URL: https://rpc-devnet.ezcode.uno/
-        ETHEREUM_JSONRPC_WS_URL: ws://host.docker.internal:8546/
-        CHAIN_ID: '99'
+        ETHEREUM_JSONRPC_HTTP_URL: https://rpc-devnet.kinggamer.org/
+        ETHEREUM_JSONRPC_TRACE_URL: https://rpc-devnet.kinggamer.org/
+        ETHEREUM_JSONRPC_WS_URL: wss://ws-devnet.kinggamer.org/
+        CHAIN_ID: '2425'
 
   visualizer:
     extends:
