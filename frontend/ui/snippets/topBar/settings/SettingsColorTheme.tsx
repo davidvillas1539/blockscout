@@ -32,14 +32,14 @@ const SettingsColorTheme = () => {
 
     const nextColorMode = (() => {
       if (!cookieColorMode) {
-        return 'light';
+        return 'dark';
       }
 
       return cookieColorMode;
     })();
 
     const colorModeThemes = COLOR_THEMES.filter(theme => theme.colorMode === nextColorMode);
-    const fallbackHex = colorModeThemes[colorModeThemes.length - 1].hex;
+    const fallbackHex = colorModeThemes[colorModeThemes.length - 2].hex;
     const cookieHex = cookies.get(cookies.NAMES.COLOR_MODE_HEX) ?? fallbackHex;
     setTheme(cookieHex);
     setActiveHex(cookieHex);
